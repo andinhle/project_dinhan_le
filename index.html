@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev lởp</title>
+    <link rel="stylesheet" href="/style/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="container">
+        <div class="container">
+        </div>
+        <div class="head_wrap">
+            <div class="head_ins">
+                <div class="header">
+                    <div class="logoblock">
+                        <div class="logoblock_ins">
+                            <a href="https://www.coinw.com/">
+                                <img src="/images/logo.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu_header">
+                        <nav>
+                            <ul class="menu_head_ins">
+                                <li class="menu_list"><b>Home</b></li>
+                                <li class="menu_list"><b>About Us</b></li>
+                                <li class="menu_list"><b>Tokenomics</b></li>
+                                <li class="menu_list"><a href="https://t.me/TelethonChat"><b>Telegram</b></a></li>
+                                <button type="button" onclick='document.getElementById("demo").innerHTML = "0x568cdfda491099702e64d3427a8fbd652a98da92"'>Contract</button>
+                            </ul>
+                        </nav>
+                        <p id="demo">Watch Contract</p>
+                        
+                    </div>
+                    <div class="main_head_main">
+                        <div class="main_head">
+                            </div>
+                                <img src="/images/anhnen.png">
+                                <p id="dong_ho">
+                                </p>
+                        </div>
+                    </div>
+                    <!-- <div countdown="data-seconds" data-date="Today">
+                        Chỉ còn: <span data-days="">00</span> ngày 
+                                 <span data-hours="">00</span> giờ 
+                                 <span data-minutes="">001</span> phút 
+                                 <span data-seconds="">00</span> giây
+                     </div> -->
+                    <div class="page_warp">
+                        <div class="page_ins">
+                            <div>
+                                <img src="/images/anhnen2.png">
+                            </div>
+                            <div class="text_ins">
+                                <h1>Tokenomics</h1>
+                                <h2>Tota Supply : 1,000,000,000 <br>
+                                    Max Transaction –– 1.5 % <br>
+                                    Max Wallet –– 3.0 % <br>
+                                    Tax Buy  : 2 %<br>
+                                    Tax Sell : 2 % </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_end">
+                        <div class="container_end_ins">
+                            <h3>© 2022 dev lởp Đình An . All rights reserved</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    
+    
+//     function Dong_ho() {
+//         var gio = document.getElementById("gio");
+//         var phut = document.getElementById("phut");
+//         var giay = document.getElementById("giay");
+//         var Gio_hien_tai = new Date().getHours();
+//         var Phut_hien_tai = new Date().getMinutes();
+//         var Giay_hien_tai = new Date().getSeconds();
+//         gio.innerHTML = Gio_hien_tai;
+//         phut.innerHTML = Phut_hien_tai;
+//         giay.innerHTML = Giay_hien_tai;
+//     }
+//    var Dem_gio = setInterval(Dong_ho, 1000);
+</script>
+<script>
+    // Thiết lập thời gian đích mà ta sẽ đếm
+    var countDownDate = new Date("August 8, 2022 15:37:25").getTime();
+   
+    // cập nhập thời gian sau mỗi 1 giây
+    var x = setInterval(function() {
+   
+      // Lấy thời gian hiện tại
+      var now = new Date().getTime();
+   
+      // Lấy số thời gian chênh lệch
+      var distance = countDownDate - now;
+   
+      // Tính toán số ngày, giờ, phút, giây từ thời gian chênh lệch
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+   
+      // HIển thị chuỗi thời gian trong thẻ p
+      document.getElementById("dong_ho").innerHTML = 
+      days + "Days|" 
+      +hours + "Hours|"
+      +seconds + "Seconds";
+    
+      // Nếu thời gian kết thúc, hiển thị chuỗi thông báo
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("dong_ho").innerHTML = "The countdown has ended";
+      }
+    }, 1000);
+  </script>
+</html>
